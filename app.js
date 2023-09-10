@@ -10,7 +10,6 @@ var cors = require("cors");
 const expense = require("./routes/expense");
 const auth = require("./routes/auth");
 const income = require("./routes/income");
-const passport = require("passport");
 const port = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
@@ -31,8 +30,6 @@ app.get("/", (req, res) => {
 app.use(expense);
 app.use(auth);
 app.use(income);
-app.use(passport.initialize());
-app.use(passport.session());
 
 app.listen(port, () => {
   console.log(`server is start port number ${port}`);
