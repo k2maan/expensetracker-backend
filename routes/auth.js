@@ -4,7 +4,6 @@ const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const passport = require('passport');
 require('dotenv').config();
 var fetchUser = require('../middleware/fetchUser');
 const JWT_SECRET = process.env.JWT_SECRET;
